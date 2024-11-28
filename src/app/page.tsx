@@ -24,7 +24,7 @@ export default async function Home() {
           );
         })}
       </div>
-      <div className="min-w-[300px] sticky top-10">
+      <div className="max-w-[300px] min-w-[300px] sticky top-10">
         <Profile />
       </div>
     </div>
