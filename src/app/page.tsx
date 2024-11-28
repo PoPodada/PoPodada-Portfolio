@@ -1,5 +1,4 @@
 import BlogCard from "@/components/BlogCard";
-import Profile from "@/components/Profile";
 import { getBlogList } from "@/libs/microcms";
 
 export default async function Home() {
@@ -10,7 +9,6 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex items-start mt-8 justify-between">
       <div className="grow flex flex-wrap max-w-[750px]">
         {contents.map((post) => {
           return (
@@ -24,9 +22,5 @@ export default async function Home() {
           );
         })}
       </div>
-      <div className="max-w-[300px] min-w-[300px] sticky top-10">
-        <Profile />
-      </div>
-    </div>
   );
 }

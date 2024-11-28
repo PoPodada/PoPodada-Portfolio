@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Profile from "@/components/Profile";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,12 @@ export default function RootLayout({
       >
         <Header />
         <div className="max-w-[1080px] mx-auto px-[10px]">
-          {children}
+          <div className="flex items-start mt-8 justify-between">
+            {children}
+            <div className="max-w-[300px] min-w-[300px] sticky top-10">
+              <Profile />
+            </div>
+          </div>
         </div>
       </body>
     </html>
