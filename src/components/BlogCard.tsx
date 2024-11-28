@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { formatDate } from "../utils/Date";
+import { formatDate } from "@/utils/Date";
 
 type BlogCardProps = {
 	id: string;
