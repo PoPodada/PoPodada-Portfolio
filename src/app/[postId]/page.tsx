@@ -21,7 +21,6 @@ export default async function StaticDetailPage({
  params: { postId: string };
 }) {
  const post = await getDetailBlog(postId);
- console.log(post.createdAt)
 
  if (!post) {
   notFound();
