@@ -1,3 +1,5 @@
+"use server";
+
 import BlogCard from "@/components/BlogCard";
 import { getBlogList } from "@/libs/microcms";
 
