@@ -1,3 +1,5 @@
+"use server";
+
 import { createClient } from "microcms-js-sdk";
 import type {
   MicroCMSQueries,
@@ -19,7 +21,7 @@ if (!process.env.MICROCMS_API_KEY) {
   throw new Error("MICROCMS_API_KEY is required");
 }
 
-export const client = createClient({
+const client = createClient({
   serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
   apiKey: process.env.MICROCMS_API_KEY,
 });
@@ -27,7 +29,7 @@ export const client = createClient({
 export const getBlogList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Blog>({
     customRequestInit: {
-      cache: "no-store",
+      cache: "force-cache",
     },
     endpoint: "blogs",
     queries,

@@ -14,13 +14,18 @@ const BlogCard = (props: BlogCardProps) => {
     <Link href={`/${props.id}`} className="w-[300px] mx-6 my-2">
       <div className="bg-white rounded-lg shadow-md overflow-hidden w-[300px]">
         <div className="h-[150px] bg-gray-200">
-        <Image
+        
+          {props.imgURL ? (
+            <Image
               src={props.imgURL ? props.imgURL: ""}
               width={300}
               height={150}
               alt=""
               className=""
             />
+          ):(
+            <div></div>
+          )}
         </div>
         <div className="px-1">
           <div className="flex">

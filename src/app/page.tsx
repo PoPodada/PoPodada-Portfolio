@@ -5,6 +5,7 @@ import { getBlogList } from "@/libs/microcms";
 
 export default async function Home() {
   const { contents } = await getBlogList();
+  console.log(contents[0]);
 
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>;
